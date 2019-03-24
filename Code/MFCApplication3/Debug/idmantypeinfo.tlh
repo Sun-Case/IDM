@@ -1,0 +1,129 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 14.16.27027.1 (56d3443d).
+//
+// e:\c++项目\mfcapplication3\mfcapplication3\debug\idmantypeinfo.tlh
+//
+// C++ source equivalent of Win32 type library IDManTypeInfo.tlb
+// compiler-generated file created 02/23/19 at 17:47:08 - DO NOT EDIT!
+
+#pragma once
+#pragma pack(push, 8)
+
+#include <comdef.h>
+
+namespace IDManLib {
+
+//
+// Forward references and typedefs
+//
+
+struct __declspec(uuid("ecf21eab-3aa8-4355-82be-f777990001dd"))
+/* LIBID */ __IDManLib;
+struct /* coclass */ CIDMLinkTransmitter;
+struct __declspec(uuid("94d09862-1875-4fc9-b434-91cf25c840a1"))
+/* interface */ ICIDMLinkTransmitter2;
+struct __declspec(uuid("4bd46aae-c51f-4bf7-8bc0-2e86e33d1873"))
+/* interface */ ICIDMLinkTransmitter;
+
+//
+// Smart pointer typedef declarations
+//
+
+_COM_SMARTPTR_TYPEDEF(ICIDMLinkTransmitter, __uuidof(ICIDMLinkTransmitter));
+_COM_SMARTPTR_TYPEDEF(ICIDMLinkTransmitter2, __uuidof(ICIDMLinkTransmitter2));
+
+//
+// Type library items
+//
+
+struct __declspec(uuid("ac746233-e9d3-49cd-862f-068f7b7ccca4"))
+CIDMLinkTransmitter;
+    // [ default ] interface ICIDMLinkTransmitter2
+    // interface ICIDMLinkTransmitter
+
+struct __declspec(uuid("4bd46aae-c51f-4bf7-8bc0-2e86e33d1873"))
+ICIDMLinkTransmitter : IUnknown
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT SendLinkToIDM (
+        _bstr_t bstrUrl,
+        _bstr_t bstrReferer,
+        _bstr_t bstrCookies,
+        _bstr_t bstrData,
+        _bstr_t bstrUser,
+        _bstr_t bstrPassword,
+        _bstr_t bstrLocalPath,
+        _bstr_t bstrLocalFileName,
+        long lFlags );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_SendLinkToIDM (
+        /*[in]*/ BSTR bstrUrl,
+        /*[in]*/ BSTR bstrReferer,
+        /*[in]*/ BSTR bstrCookies,
+        /*[in]*/ BSTR bstrData,
+        /*[in]*/ BSTR bstrUser,
+        /*[in]*/ BSTR bstrPassword,
+        /*[in]*/ BSTR bstrLocalPath,
+        /*[in]*/ BSTR bstrLocalFileName,
+        /*[in]*/ long lFlags ) = 0;
+};
+
+struct __declspec(uuid("94d09862-1875-4fc9-b434-91cf25c840a1"))
+ICIDMLinkTransmitter2 : ICIDMLinkTransmitter
+{
+    //
+    // Wrapper methods for error-handling
+    //
+
+    HRESULT SendLinkToIDM2 (
+        _bstr_t bstrUrl,
+        _bstr_t bstrReferer,
+        _bstr_t bstrCookies,
+        _bstr_t bstrData,
+        _bstr_t bstrUser,
+        _bstr_t bstrPassword,
+        _bstr_t bstrLocalPath,
+        _bstr_t bstrLocalFileName,
+        long lFlags,
+        const _variant_t & reserved1,
+        const _variant_t & reserved2 );
+    HRESULT SendLinksArray (
+        _bstr_t location,
+        VARIANT * pLinksArray );
+
+    //
+    // Raw methods provided by interface
+    //
+
+      virtual HRESULT __stdcall raw_SendLinkToIDM2 (
+        /*[in]*/ BSTR bstrUrl,
+        /*[in]*/ BSTR bstrReferer,
+        /*[in]*/ BSTR bstrCookies,
+        /*[in]*/ BSTR bstrData,
+        /*[in]*/ BSTR bstrUser,
+        /*[in]*/ BSTR bstrPassword,
+        /*[in]*/ BSTR bstrLocalPath,
+        /*[in]*/ BSTR bstrLocalFileName,
+        /*[in]*/ long lFlags,
+        /*[in]*/ VARIANT reserved1,
+        /*[in]*/ VARIANT reserved2 ) = 0;
+      virtual HRESULT __stdcall raw_SendLinksArray (
+        /*[in]*/ BSTR location,
+        /*[in]*/ VARIANT * pLinksArray ) = 0;
+};
+
+//
+// Wrapper method implementations
+//
+
+#include "e:\c++项目\mfcapplication3\mfcapplication3\debug\idmantypeinfo.tli"
+
+} // namespace IDManLib
+
+#pragma pack(pop)

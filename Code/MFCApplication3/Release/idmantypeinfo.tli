@@ -1,0 +1,34 @@
+﻿// Created by Microsoft (R) C/C++ Compiler Version 14.16.27027.1 (2c12d01c).
+//
+// e:\c++项目\mfcapplication3\mfcapplication3\release\idmantypeinfo.tli
+//
+// Wrapper implementations for Win32 type library IDManTypeInfo.tlb
+// compiler-generated file created 02/23/19 at 18:10:34 - DO NOT EDIT!
+
+#pragma once
+
+//
+// interface ICIDMLinkTransmitter wrapper method implementations
+//
+
+inline HRESULT ICIDMLinkTransmitter::SendLinkToIDM ( _bstr_t bstrUrl, _bstr_t bstrReferer, _bstr_t bstrCookies, _bstr_t bstrData, _bstr_t bstrUser, _bstr_t bstrPassword, _bstr_t bstrLocalPath, _bstr_t bstrLocalFileName, long lFlags ) {
+    HRESULT _hr = raw_SendLinkToIDM(bstrUrl, bstrReferer, bstrCookies, bstrData, bstrUser, bstrPassword, bstrLocalPath, bstrLocalFileName, lFlags);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+//
+// interface ICIDMLinkTransmitter2 wrapper method implementations
+//
+
+inline HRESULT ICIDMLinkTransmitter2::SendLinkToIDM2 ( _bstr_t bstrUrl, _bstr_t bstrReferer, _bstr_t bstrCookies, _bstr_t bstrData, _bstr_t bstrUser, _bstr_t bstrPassword, _bstr_t bstrLocalPath, _bstr_t bstrLocalFileName, long lFlags, const _variant_t & reserved1, const _variant_t & reserved2 ) {
+    HRESULT _hr = raw_SendLinkToIDM2(bstrUrl, bstrReferer, bstrCookies, bstrData, bstrUser, bstrPassword, bstrLocalPath, bstrLocalFileName, lFlags, reserved1, reserved2);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
+
+inline HRESULT ICIDMLinkTransmitter2::SendLinksArray ( _bstr_t location, VARIANT * pLinksArray ) {
+    HRESULT _hr = raw_SendLinksArray(location, pLinksArray);
+    if (FAILED(_hr)) _com_issue_errorex(_hr, this, __uuidof(this));
+    return _hr;
+}
